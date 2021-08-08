@@ -8,4 +8,4 @@ login and signup screen , user can login , post , chat and edit his information
 ![post](https://user-images.githubusercontent.com/77443413/128642330-b83727be-92ac-4cca-8979-0656a39164bc.jpeg)
 ![mainprofile](https://user-images.githubusercontent.com/77443413/128642332-7c19a3e0-e082-4ea0-a3bc-26fcdb15947f.jpeg)
 ![chats](https://user-images.githubusercontent.com/77443413/128642335-5af899be-a891-4c00-8fc3-b2531b08d81e.jpeg)
-![chat](https://user-images.githubusercontent.com/77443413/128642337-e09da1dd-3523-43b3-bb07-5a914783c1ad.jpeg)
+
