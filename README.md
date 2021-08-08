@@ -1,16 +1,11 @@
-# udemy_flutter
+# Social-App
+Flutter social application using firebase , bloc , sharedprefrences , cloud firestore
+login and signup screen , user can login , post , chat and edit his information 
 
-A new Flutter application.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![profile](https://user-images.githubusercontent.com/77443413/128642327-c3ffb915-762d-409d-a73f-547b360ef315.jpeg)
+![post2](https://user-images.githubusercontent.com/77443413/128642328-4da3118e-bad8-45d1-8ed9-0440f78014d5.jpeg)
+![post](https://user-images.githubusercontent.com/77443413/128642330-b83727be-92ac-4cca-8979-0656a39164bc.jpeg)
+![mainprofile](https://user-images.githubusercontent.com/77443413/128642332-7c19a3e0-e082-4ea0-a3bc-26fcdb15947f.jpeg)
+![chats](https://user-images.githubusercontent.com/77443413/128642335-5af899be-a891-4c00-8fc3-b2531b08d81e.jpeg)
+![chat](https://user-images.githubusercontent.com/77443413/128642337-e09da1dd-3523-43b3-bb07-5a914783c1ad.jpeg)
