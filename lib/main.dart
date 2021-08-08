@@ -16,7 +16,6 @@ import 'package:udemy_flutter/shared/network/remote/dio_helper.dart';
 import 'package:udemy_flutter/shared/styles/themes.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
@@ -27,14 +26,13 @@ void main() async {
   bool isDark = CacheHelper.getData(key: 'isDark');
   //bool onBoarding = CacheHelper.getData(key: 'onBoarding');
   // token = CacheHelper.getData(key: 'token');
-   uId = CacheHelper.getData(key: 'uId');
+  uId = CacheHelper.getData(key: 'uId');
 
-if(uId != null){
-  widget = SocialLayout();
-}
-else{
-  widget = SocialLoginScreen();
-}
+  if (uId != null) {
+    widget = SocialLayout();
+  } else {
+    widget = SocialLoginScreen();
+  }
 
   // if (onBoarding != null) if (token != null) {
   //   widget = ShopLayout();
@@ -78,11 +76,16 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (BuildContext context) => SocialCubit()
-            ..getSocialUserData(
-            )..getPosts(),
+            ..getSocialUserData()
+            ..getPosts(),
         ),
         //getSocialUserData
-        BlocProvider(create: (BuildContext context) => ShopCubit()..getHomeData()..getCategories()..getFavorites()..getUserData()),
+        BlocProvider(
+            create: (BuildContext context) => ShopCubit()
+              ..getHomeData()
+              ..getCategories()
+              ..getFavorites()
+              ..getUserData()),
       ],
       child: BlocConsumer<AppCubit, AppStates>(
         listener: (context, state) {},
@@ -90,7 +93,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
               theme: lightTheme,
-             // darkTheme:darkTheme,
+              // darkTheme:darkTheme,
               themeMode: AppCubit.get(context).isDark
                   ? ThemeMode.dark
                   : ThemeMode.light,

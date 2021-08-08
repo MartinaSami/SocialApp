@@ -26,15 +26,12 @@ class SocialLoginScreen extends StatelessWidget {
       create: (BuildContext context) => SocialLoginCubit(),
       child: BlocConsumer<SocialLoginCubit, SocialLoginStates>(
         listener: (context, state) {
-          if(state is SocialLoginErrorState){
+          if (state is SocialLoginErrorState) {
             showToast(text: state.error, state: ToastStates.ERROR);
           }
-          if(state is SocialLoginSuccessState){
-            CacheHelper.saveData(
-                key: 'uId', value: state.uId).then((value) {
-
-              navigateAndFinish(
-                  context, SocialLayout());
+          if (state is SocialLoginSuccessState) {
+            CacheHelper.saveData(key: 'uId', value: state.uId).then((value) {
+              navigateAndFinish(context, SocialLayout());
             });
           }
         },
@@ -44,23 +41,23 @@ class SocialLoginScreen extends StatelessWidget {
             body: Center(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: const EdgeInsets.all(20.0),
+                  padding: const EdgeInsets.all(15.0),
                   child: Form(
                     key: formKey,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'LOGIN',
-                          style: Theme.of(context).textTheme.headline4.copyWith(
-                                color: Colors.black,
-                              ),
+                        Center(
+                          child: Text(
+                            'Sign in',
+                            style:
+                                Theme.of(context).textTheme.headline3.copyWith(
+                                      color: Colors.black,
+                                    ),
+                          ),
                         ),
-                        Text(
-                          'Login now to communicate with friends',
-                          style: Theme.of(context).textTheme.bodyText1.copyWith(
-                                color: Colors.grey,
-                              ),
+                        Container(
+                          child: Image.asset('assets/logo.jpg'),
                         ),
                         SizedBox(
                           height: 30.0,
@@ -140,7 +137,7 @@ class SocialLoginScreen extends StatelessWidget {
                                   SocialRegisterScreen(),
                                 );
                               },
-                              text: 'register',
+                              text: 'Register',
                             ),
                           ],
                         ),

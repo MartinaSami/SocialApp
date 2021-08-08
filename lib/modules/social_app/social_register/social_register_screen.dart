@@ -37,17 +37,17 @@ class SocialRegisterScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          'REGISTER',
-                          style: Theme.of(context).textTheme.headline4.copyWith(
-                                color: Colors.black,
-                              ),
+                        Center(
+                          child: Text(
+                            'Sign up',
+                            style: Theme.of(context).textTheme.headline3.copyWith(
+                                  color: Colors.black,
+                                ),
+                          ),
                         ),
-                        Text(
-                          'Register now to communicate with friends',
-                          style: Theme.of(context).textTheme.bodyText1.copyWith(
-                                color: Colors.grey,
-                              ),
+                        Container(
+
+                          child: Image.asset('assets/logo.jpg'),
                         ),
                         SizedBox(
                           height: 30.0,

@@ -9,9 +9,9 @@ import 'package:udemy_flutter/shared/styles/icon_broken.dart';
 
 Widget defaultButton({
   double width = double.infinity,
-  Color background = Colors.blue,
+  Color background = Colors.black,
   bool isUpperCase = true,
-  double radius = 3.0,
+  double radius = 30.0,
   @required Function function,
   @required String text,
 }) =>
@@ -77,7 +77,12 @@ Widget defaultFormField({
                 ),
               )
             : null,
-        border: OutlineInputBorder(),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(25.0),
+          borderSide: BorderSide(
+            width: 5.0,
+          ),
+        ),
       ),
     );
 
@@ -433,7 +438,6 @@ Widget defaultAppBar({
           Navigator.of(context).pop();
         },
         icon: Icon(IconBroken.Arrow___Left_2),
-
       ),
       titleSpacing: 5.0,
       title: Text(title),
